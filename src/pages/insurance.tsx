@@ -55,13 +55,13 @@ const InsuranceProviderSearchPage: React.FC = () => {
       if (price && result.price !== price) {
         include = false;
       }
-      if (medicalIncluded && result.medicalIncluded !== medicalIncluded) {
+      if (medicalIncluded && result.medicalIncluded.toString() !== medicalIncluded) {
         include = false;
       }
-      if (dentalIncluded && result.dentalIncluded !== dentalIncluded) {
+      if (dentalIncluded && result.dentalIncluded.toString() !== dentalIncluded) {
         include = false;
       }
-      if (visionIncluded && result.visionIncluded !== visionIncluded) {
+      if (visionIncluded && result.visionIncluded.toString() !== visionIncluded) {
         include = false;
       }
       return include;

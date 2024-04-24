@@ -1,80 +1,93 @@
 import React from 'react';
-import Header2 from "../components/NavBari";
+import Footer from '../components/Footer';
+import Header from '../components/NavBari';
 
-const InsuranceProviderDashboard = () => {
-  // Static provider details
-  const provider = {
-    name: 'John Doe',
-    email: 'john.doe@example.com'
+const InsuranceProviderdb: React.FC = () => {
+  // Sample data for demonstration
+  const statsData = {
+    totalCustomers: 500,
+    mostValuablePlan: 'Premium Plan',
+    totalRevenue: '$100,000',
+    totalClaims: '$20,000',
   };
 
-  // Static insurance package details
-  const insurancePackage = {
-    insurance_provider: 'Anthem',
-    plan_name: 'Anthem-Medium',
-    plan_description: 'Anyone can take this. Covers all the basic things',
-    plan_cost: 700,
-    includes_prescription: true,
-    includes_dental: true,
-    includes_vision: false
-  };
+  // Sample data for patient claims
+  const patientClaims = [
+    { id: 1, name: 'John Doe', claimedAmount: '$500' },
+    { id: 2, name: 'Jane Smith', claimedAmount: '$750' },
+    { id: 3, name: 'Alice Johnson', claimedAmount: '$300' },
+    { id: 1, name: 'John Doe', claimedAmount: '$500' },
+    { id: 2, name: 'Jane Smith', claimedAmount: '$750' },
+    { id: 3, name: 'Alice Johnson', claimedAmount: '$300' },
+    { id: 3, name: 'Alice Johnson', claimedAmount: '$300' },
+    { id: 1, name: 'John Doe', claimedAmount: '$500' },
+    { id: 2, name: 'Jane Smith', claimedAmount: '$750' },
+    { id: 3, name: 'Alice Johnson', claimedAmount: '$300' },
+    { id: 3, name: 'Alice Johnson', claimedAmount: '$300' },
+    { id: 1, name: 'John Doe', claimedAmount: '$500' },
+    { id: 2, name: 'Jane Smith', claimedAmount: '$750' },
+    { id: 3, name: 'Alice Johnson', claimedAmount: '$300' },
+    { id: 3, name: 'Alice Johnson', claimedAmount: '$300' },
+    { id: 1, name: 'John Doe', claimedAmount: '$500' },
+    { id: 2, name: 'Jane Smith', claimedAmount: '$750' },
+    { id: 3, name: 'Alice Johnson', claimedAmount: '$300' },
+    // Add more sample data as needed
+  ];
 
   return (
-    <div style={styles.container}>
-      <Header2 />
-      <header style={styles.header}>
-        <h1>Welcome, Insurance Provider</h1>
-      </header>
-      <section style={styles.section}>
-        <h2>Provider Details</h2>
-        <div style={styles.content}>
-          <p><strong>Name:</strong> {provider.name}</p>
-          <p><strong>Email:</strong> {provider.email}</p>
+    <main>
+      <Header />
+      <div className="flex justify-center">
+        <div className="w-3/4 flex justify-between my-8">
+          {/* Graphs or Stats Section */}
+          <div className="w-2/3 mr-4">
+            <h2 className="text-2xl font-semibold mb-4">Dashboard</h2>
+            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+              <h3 className="text-lg font-semibold mb-4">Statistics</h3>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <p>Total Customers: {statsData.totalCustomers}</p>
+                </div>
+                <div>
+                  <p>Most Valuable Plan: {statsData.mostValuablePlan}</p>
+                </div>
+                <div>
+                  <p>Total Revenue: {statsData.totalRevenue}</p>
+                </div>
+                <div>
+                  <p>Total Claims: {statsData.totalClaims}</p>
+                </div>
+              </div>
+            </div>
+            {/* Add more graphs or stats components here */}
+          </div>
+          {/* Patient Claims Section */}
+          <div className="w-1/3 bg-white rounded-lg shadow-md p-6 max-h-[75vh] overflow-y-auto text-center">
+            <h3 className="text-xl font-semibold mb-4">Patient Claims</h3>
+            <table className="w-full">
+              <thead>
+                <tr>
+                  <th className="py-2">No.</th>
+                  <th className="py-2">Patient Name</th>
+                  <th className="py-2">Claimed Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                {patientClaims.map((claim) => (
+                  <tr key={claim.id}>
+                    <td className="py-2">{claim.id}</td>
+                    <td className="py-2">{claim.name}</td>
+                    <td className="py-2">{claim.claimedAmount}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
-      </section>
-      <section style={styles.section}>
-        <h2>Insurance Package Details</h2>
-        <div style={styles.content}>
-          <p><strong>Insurance Provider:</strong> {insurancePackage.insurance_provider}</p>
-          <p><strong>Plan Name:</strong> {insurancePackage.plan_name}</p>
-          <p><strong>Description:</strong> {insurancePackage.plan_description}</p>
-          <p><strong>Cost:</strong> ${insurancePackage.plan_cost}</p>
-          <p><strong>Includes Prescription:</strong> {insurancePackage.includes_prescription ? 'Yes' : 'No'}</p>
-          <p><strong>Includes Dental:</strong> {insurancePackage.includes_dental ? 'Yes' : 'No'}</p>
-          <p><strong>Includes Vision:</strong> {insurancePackage.includes_vision ? 'Yes' : 'No'}</p>
-        </div>
-      </section>
-      <section style={styles.section}>
-        <h2>Advertisements</h2>
-        <div style={styles.content}>
-          <p>Special offer: Get 20% off on all insurance plans!</p>
-          <p>Secure your future with our comprehensive insurance coverage.</p>
-        </div>
-      </section>
-    </div>
+      </div>
+      <Footer />
+    </main>
   );
-};
+}
 
-const styles = {
-  container: {
-    maxWidth: '800px',
-    margin: '0 auto',
-    padding: '20px',
-    fontFamily: 'Arial, sans-serif',
-  },
-  header: {
-    textAlign: 'center' as const, // Ensure textAlign is of type TextAlign
-    marginBottom: '20px',
-  },
-  section: {
-    marginBottom: '40px',
-  },
-  content: {
-    backgroundColor: '#f9f9f9',
-    padding: '20px',
-    borderRadius: '5px',
-    boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
-  },
-};
-
-export default InsuranceProviderDashboard;
+export default InsuranceProviderdb;
