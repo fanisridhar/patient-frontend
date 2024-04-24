@@ -30,19 +30,19 @@ export default function Home() {
               </p>
               <div className="text-left mt-8 flex ">
                 <Link
-                  className="text-left mx-auto text-xl bg-emerald-700 text-white border border-emerald-700 font-bold py-2 px-6 rounded-lg mr-4 whitespace-nowrap"
+                  className="text-left mx-auto text-xl bg-emerald-700 hover:bg-emerald-700 text-white border border-emerald-700 font-bold py-2 px-6 rounded-lg shadow-md transition duration-300 transform hover:scale-105 mr-4 whitespace-nowrap"
                   href="/patientlogin"
                 >
                   I'm a Patient
                 </Link>
                 <Link
-                  className="text-left mx-auto text-xl bg-emerald-700 text-white border border-emerald-700 font-bold py-2 px-6 rounded-lg mr-4 whitespace-nowrap"
+                  className="text-left mx-auto text-xl bg-emerald-700 hover:bg-emerald-700 text-white border border-emerald-700 font-bold py-2 px-6 rounded-lg shadow-md transition duration-300 transform hover:scale-105 mr-4 whitespace-nowrap"
                   href="/doctorlogin"
                 >
                   I'm a Doctor
                 </Link>
                 <Link
-                  className="text-left mx-auto text-xl bg-emerald-700 text-white border border-emerald-700 font-bold py-2 px-6 rounded-lg whitespace-nowrap"
+                  className="text-left mx-auto text-xl bg-emerald-700 hover:bg-emerald-700 text-white border border-emerald-700 font-bold py-2 px-6 rounded-lg shadow-md transition duration-300 transform hover:scale-105 mr-4 whitespace-nowrap"
                   href="/insurancelogin"
                 >
                   I sell Insurance Plans

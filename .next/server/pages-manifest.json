@@ -2,7 +2,11 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/search": "pages/search.js",
   "/": "pages/index.js",
-  "/insurancelogin": "pages/insurancelogin.js"
+  "/login": "pages/login.js",
+  "/patientsignup": "pages/patientsignup.js",
+  "/insurance": "pages/insurance.js",
+  "/patientappointments": "pages/patientappointments.js",
+  "/account": "pages/account.js",
+  "/search": "pages/search.js"
 }

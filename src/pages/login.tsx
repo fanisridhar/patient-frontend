@@ -22,19 +22,25 @@ const Login: React.FC = () => {
           <div className="mt-8 max-w-md w-full">
             <div className="text-center mb-4">
               <h2 className="text-xl font-semibold mb-4 text-blue-800">I am a:</h2>
-              <div className="flex justify-between">
+              <div className="flex justify-center">
                 <Link href="/patientsignup">
-                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2">
+                  <button 
+                  className="bg-blue-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300 transform hover:scale-105"
+                  style={{ marginRight: '10px',boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)' }}>
                     Patient
                   </button>
                 </Link>
                 <Link href="/doctorsignup">
-                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2">
+                  <button 
+                  className="bg-blue-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300 transform hover:scale-105"
+                  style={{ marginRight: '10px', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)' }}>
                     Doctor
                   </button>
                 </Link>
                 <Link href="/insurancesignup">
-                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2">
+                  <button 
+                  className="bg-blue-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300 transform hover:scale-105"
+                  style={{ boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)' }}>
                     Insurance Provider
                   </button>
                 </Link>

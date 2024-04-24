@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Header2 from "../components/NavBari";
+import Header2 from "../components/Navbari";
 
 import { useRouter } from 'next/router';
 
