@@ -38,7 +38,10 @@ const DoctorLogin: React.FC = () => {
                 className="w-full mb-4 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
               />
               <div className="flex justify-between mb-4">
-                <button onClick={handleLogin} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                <button 
+                onClick={handleLogin} 
+                className="bg-blue-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300 transform hover:scale-105"
+                style={{ boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)' }}>
                   Doctor Sign In
                 </button>
                 <Link href="/forgot-password">
@@ -49,8 +52,10 @@ const DoctorLogin: React.FC = () => {
             <div className="text-center">
               <h2 className="text-xl font-semibold mb-4 text-purple-800">New User?</h2>
               <Link href="/doctorsignup">
-                <button className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">
-                  Sign Up
+                <button 
+                className="bg-purple-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300 transform hover:scale-105"
+                style={{ boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)' }}>
+                Sign Up
                 </button>
               </Link>
             </div>

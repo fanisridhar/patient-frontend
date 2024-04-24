@@ -12,9 +12,11 @@ const Dashboard: React.FC = () => {
           {/* First div for common guidelines */}
           <div className="mb-8 bg-red-100 rounded-lg p-6">
             <h2 className="text-2xl font-bold mb-4">Common Guidelines and Precautions</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec consectetur ipsum, eu lobortis libero. Donec auctor ligula ac ligula eleifend commodo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis id sapien mauris.
-            </p>
+            <ul className="list-disc pl-6 mb-4">
+              <li>Carefully review the terms and conditions of both the doctor's appointment and insurance coverage.</li>
+              <li>Before booking an appointment with a doctor or selecting an insurance provider, conduct thorough research to ensure their credentials, reputation, and reliability.</li>
+              <li>Look for board certification, patient reviews, and accreditation for healthcare facilities.</li>
+            </ul>
           </div>
 
           {/* Second div for finding insurance provider and doctor */}
@@ -22,9 +24,12 @@ const Dashboard: React.FC = () => {
             {/* Div for finding a doctor */}
             <div className="md:w-1/2 md:pr-4 mb-8 md:mb-0 bg-blue-100 rounded-lg p-6">
               <h2 className="text-2xl font-bold mb-4">Find a Doctor</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec consectetur ipsum, eu lobortis libero. Donec auctor ligula ac ligula eleifend commodo.
-              </p>
+              <ul className="list-disc pl-6 mb-4">
+                <li>Search by specialty</li>
+                <li>Compare reviews</li>
+                <li>Check availability</li>
+                <li>Book appointments with your trusted ones !</li>
+              </ul>
               <Link href="/search"
                 className="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
                 Find a Doctor
@@ -36,9 +41,11 @@ const Dashboard: React.FC = () => {
             {/* Div for finding an insurance provider */}
             <div className="md:w-1/2 md:pl-4 bg-green-100 rounded-lg p-6">
               <h2 className="text-2xl font-bold mb-4">Find an Insurance Provider</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec consectetur ipsum, eu lobortis libero. Donec auctor ligula ac ligula eleifend commodo.
-              </p>
+              <ul className="list-disc pl-6 mb-4">
+                <li>Compare plans</li>
+                <li>Choose coverage that suits your needs</li>
+                <li>Ensure peace of mind for you and your loved ones</li>
+              </ul>
               <Link href="/insurance"
                 className="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
                 Find Insurance Provider

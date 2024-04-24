@@ -34,7 +34,7 @@ const Login: React.FC = () => {
                   </button>
                 </Link>
                 <Link href="/insurancesignup">
-                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2">
                     Insurance Provider
                   </button>
                 </Link>
